@@ -5,30 +5,30 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: document
-  path: about-us
+  path: content/about-us
   label: About Us
 - type: directory
-  path: classes
+  path: content/classes
   label: Classes
   create: all
   match: "**/*"
 - type: directory
-  path: programs
+  path: content/programs
   label: Programs
   create: all
   match: "**/*"
 - type: directory
-  path: events
+  path: content/events
   label: Events
   create: all
   match: "**/*"
 - type: directory
-  path: blog
+  path: content/blog
   label: Posts
   create: all
   match: "**/*"
 - type: directory
-  path: ''
+  path: content
   label: Pages
   create: all
   match: "*"

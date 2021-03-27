@@ -62,5 +62,3 @@ fields:
       format: markdown
   label: Author Description
   description: Describes who the author is
-pages:
-- blog/test-blog-post.md

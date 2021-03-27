@@ -3,14 +3,62 @@ label: Blog Post
 hide_body: true
 fields:
 - type: text
-  name: baseURL
-  label: baseURL
-- type: text
-  name: languageCode
-  label: languageCode
-- type: text
   name: title
-  label: title
-- type: text
-  name: theme
-  label: theme
+  label: Blog Title
+  description: Blog post title
+  config:
+    required: true
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Content
+  description: Content of the blog post
+- name: blog_post_date
+  type: datetime
+  label: Blog Post Date
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  description: The time a blog post is published
+  default: now
+- name: blog_tags
+  type: tag_list
+  default: []
+  label: Blog Tags
+  description: Provide tags for grouping sets of posts
+- name: author
+  type: text
+  config:
+    required: true
+  label: Author
+  description: Name of person who wrote the post
+- name: author_title
+  type: text
+  config:
+    required: true
+  label: Author Title
+  description: 'Ex: "Community Guest Contributor"'
+- name: author_photo
+  type: file
+  config:
+    maxSize: 64
+  label: Author Photo
+  description: Photo of author
+  default: "/uploads/gvjci-logo.png"
+- name: author_description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Author Description
+  description: Describes who the author is

@@ -6,7 +6,6 @@ author_title = "Software Engineer"
 blog_post_date = 2021-03-27T20:19:33Z
 blog_tags = ["test"]
 content = "This is a test blog post"
-draft = true
 title = "Test Blog Post"
 
 +++

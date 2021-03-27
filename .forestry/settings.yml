@@ -5,17 +5,22 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: content/blog
-  label: Blog
+  path: programs
+  label: Programs
   create: all
   match: "**/*"
 - type: directory
-  path: content/posts
+  path: events
+  label: Events
+  create: all
+  match: "**/*"
+- type: directory
+  path: blog
   label: Posts
   create: all
   match: "**/*"
 - type: directory
-  path: content
+  path: ''
   label: Pages
   create: all
   match: "*"

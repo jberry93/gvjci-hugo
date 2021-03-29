@@ -1,5 +1,4 @@
 +++
-draft = true
 
 +++
 This is a test home page

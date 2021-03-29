@@ -1,0 +1,21 @@
+<article class="gvjci-article">
+    <h2 class="gvjci-post-title">
+        <a href="{{ .Permalink }}">
+            {{ .Title }}
+        </a>
+    </h2>
+    <div class="gvjci-post-meta">
+        {{ partial "postmeta.html" }}
+    </div>
+    <div class="gvjci-post-entry">
+        {{ if .Truncated }}
+            <p class="gvjci-post-summary">
+                {{ .Summary }}
+                <a
+                    class="gvjci-read-more"
+                    href="{{ .Permalink }}"
+                >Read More</a>
+            </p>
+        {{ end }}
+    </div>
+</article>

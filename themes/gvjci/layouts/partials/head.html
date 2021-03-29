@@ -1,5 +1,18 @@
+{{ $mainStyles := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
 <head>
-    <title>GVJCI</title>
+    {{ if .Title }}
+        <title>{{ .Title }} - {{ .Site.Title }}</title>
+    {{ else }}
+        <title>{{ .Site.Title }}</title>
+    {{ end }}
+    {{ with .Site.Params.description }}
+        <meta name="description" content="{{ . }}">
+    {{ end }}
+    {{ with .Site.Author.Name }}
+        <meta name="author" content="{{ . }}">
+    {{ end }}
     <meta charset="utf-8">
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ $mainStyles.Permalink }}">
 </head>

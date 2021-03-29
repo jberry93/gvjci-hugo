@@ -1,0 +1,10 @@
+<span class="gvjci-meta-post">
+    {{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006" ) }}
+    {{ if .Params.categories }}
+        {{ range .Params.categories }}
+            <a href="{{ $.Site.BaseURL }}/categories/{{ . | urlize }}/">
+                {{ . }}
+            </a>
+        {{ end }}
+    {{ end }}
+</span>

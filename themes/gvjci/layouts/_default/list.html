@@ -1,0 +1,9 @@
+{{ define "main" }}
+    <div class="gvjci-container">
+        <div class="gvjci-posts">
+            {{ range .Paginator.Pages }}
+                {{ partial "preview.html" . }}
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

@@ -1,0 +1,17 @@
+<nav class="gvjci-navbar">
+    <div class="gvjci-nav">
+        {{ if .Site.Params.logo }}
+            <a class="gvjci-logo-link" href="{{ .Site.BaseURL }}">
+                <img
+                    src="{{ .Site.BaseURL }}images/{{ .Site.Params.logo.url }}"
+                    alt="{{ .Site.Params.logo.alt }}"
+                >
+            </a>
+        {{ end }}
+        <ul class="gvjci-nav-links">
+            {{ range .Site.Params.nav }}
+                <li><a href="{{ .url | relLangURL }}">{{ .name }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+</nav>

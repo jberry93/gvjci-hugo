@@ -1,4 +1,50 @@
 ---
 label: Event
 hide_body: false
-fields: []
+fields:
+- name: event_title
+  type: text
+  config:
+    required: true
+  label: Event Title
+  description: Title of the event
+- name: event_description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Event Description
+  description: General description of event
+- name: event_flyer
+  type: file
+  config:
+    maxSize: 64
+  label: Event Flyer
+  description: Provide a flyer if present
+- name: youtube_links
+  type: field_group_list
+  fields:
+  - name: link_1
+    type: text
+    config:
+      required: false
+    label: Link 1
+  - name: link_2
+    type: text
+    config:
+      required: false
+    label: Link 2
+  - name: link_3
+    type: text
+    config:
+      required: false
+    label: Link 3
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Youtube Links
+  description: Provide links to youtube videos for embedding

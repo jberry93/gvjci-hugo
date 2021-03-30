@@ -53,3 +53,5 @@ fields:
       format: markdown
   label: Author Description
   description: Describes who the author is
+pages:
+- content/blog/another-test.md

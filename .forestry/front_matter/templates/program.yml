@@ -1,4 +1,31 @@
 ---
 label: Program
 hide_body: false
-fields: []
+fields:
+- name: program_title
+  type: text
+  config:
+    required: true
+  label: Program Title
+  description: Title of the program
+- name: program_image
+  type: file
+  config:
+    maxSize: 64
+  label: Program Image
+  description: An image or flyer that compliments the program
+- name: program_gallery
+  type: image_gallery
+  config: {}
+  label: Program Gallery
+  description: Provide any pictures of the program for display
+- name: program_description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Program Description
+  description: General description, pricing, contact information, and times
